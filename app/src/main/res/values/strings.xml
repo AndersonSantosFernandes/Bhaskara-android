@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">minhatela02</string>
+    <string name="texto1">Valor</string>
+    <string name="vlrA">Valor de A</string>
+    <string name="vlrB">Valor de B</string>
+    <string name="vlrC">Valor de C</string>
+    <string name="digite">Digite...</string>
+    <string name="bhaskara">Formula de Bhaskara</string>
+    <string name="calculo">Calcular</string>
+</resources>
