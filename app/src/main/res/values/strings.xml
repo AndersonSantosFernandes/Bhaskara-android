@@ -7,4 +7,9 @@
     <string name="digite">Digite...</string>
     <string name="bhaskara">Formula de Bhaskara</string>
     <string name="calculo">Calcular</string>
+    <string name="fatorial">Fatorial</string>
+    <string name="temperatura">Conversor de temperatura</string>
+    <string name="temp">Conv. Temp</string>
+    <string name="cpf">Celcius para Fahrenheit</string>
+    <string name="fpc"> Fahrenheit para Celcius </string>
 </resources>

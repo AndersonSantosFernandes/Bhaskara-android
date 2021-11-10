@@ -2,6 +2,7 @@ package com.meu.minhatela02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,14 +14,15 @@ import com.google.android.material.snackbar.Snackbar;
 public class TelaDois extends AppCompatActivity {
     private EditText valorA, valorB, valorC;
     private TextView delta, x1linha, x2linha;
-    private Button calculo;
+    private Button calculo, fatorial, temperatura;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_dois);
         getSupportActionBar().hide();
-
+        IniciarComponentes();
+        IniciarComponentes1();
         valorA = findViewById(R.id.editA);
         valorB = findViewById(R.id.editB);
         valorC = findViewById(R.id.editC);
@@ -29,6 +31,7 @@ public class TelaDois extends AppCompatActivity {
         x2linha = findViewById(R.id.x2linha);
         calculo = findViewById(R.id.buttonCalc);
 
+
         Button buttonCalc = findViewById(R.id.buttonCalc);
         buttonCalc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
@@ -36,7 +39,7 @@ public class TelaDois extends AppCompatActivity {
                 String B = valorB.getText().toString();
                 String C = valorC.getText().toString();
                 if(A.isEmpty() || B.isEmpty() || C.isEmpty()){
-                    Snackbar.make(view,"A, B e C devemestar preenchidos",Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(view,"A, B e C devem estar preenchidos",Snackbar.LENGTH_SHORT).show();
                 }else{
                     double vlA = Double.parseDouble(String.valueOf(valorA.getText()));
                     double vlB = Double.parseDouble(String.valueOf(valorB.getText()));
@@ -49,10 +52,37 @@ public class TelaDois extends AppCompatActivity {
                     delta.setText("Delta: "+ dlta+ " - Raiz de Delta: "+resultado);
                     x1linha.setText("X'  "+linha1);
                     x2linha.setText("X'' "+linha2);
+                    valorA.setText("");
+                    valorB.setText("");
+                    valorC.setText("");
                 }
 
             }
         });
 
+        fatorial.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(TelaDois.this,Fatorial.class);
+                startActivity(intent);
+            }
+        });
+
+        temperatura.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(TelaDois.this,Temperatura.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
-}
+
+    private void IniciarComponentes1() {
+        temperatura = findViewById(R.id.buttonFt);
+    }
+
+    private void IniciarComponentes(){
+        fatorial = findViewById(R.id.Fatorial);
+    }
+
+    }

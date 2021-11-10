@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="background">
-        <item name="android:background">@drawable/gradient</item>
-    </style>
-    <style name="viewText">
+        <style name="viewText">
         <item name="android:layout_width">130dp</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="marginUp">
+        <item name="android:layout_marginTop">5dp</item>
+
     </style>
 
 </resources>

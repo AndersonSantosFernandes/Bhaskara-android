@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_5"
+    tools:context=".Fatorial" >
+
+
+    <TextView
+        android:id="@+id/fator"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#D31679E1"
+        android:gravity="center"
+        android:text="@string/fatorial"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/entrada"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Digite um número para calcular o fatorial"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fator"
+        tools:layout_editor_absoluteX="79dp" />
+
+    <TextView
+        android:id="@+id/mostrar"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="28dp"
+        android:background="#4FE6765A"
+        android:gravity="center"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/entrada" />
+
+    <Button
+        android:id="@+id/buttonFat"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_margin="30dp"
+        android:text="@string/calculo"
+        android:textSize="34dp"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="397dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/fator"
+        app:layout_constraintTop_toBottomOf="@id/mostrar"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -10,13 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Minhatela02">
         <activity
+            android:name=".Temperatura"
+            android:exported="true" />
+        <activity
+            android:name=".Fatorial"
+            android:exported="true" />
+        <activity
             android:name=".TelaDois"
-            android:exported="true" >
-        <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
